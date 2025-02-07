@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+</head>
+<body>
+  <p>Rock paper scissors</p>
+
+  <button onclick="
+    playGame('Rock')
+   // const computerMove = pickComputerMove();
+  ">Rock</button>
+
+  <button onclick="
+    playGame('Paper')
+    //console.log(computerMove)
+  ">Paper</button>
+
+  <button onclick="
+    playGame('Scissor')
+  ">Scissors</button>
+ 
+  <script>
+    
+    function playGame(playerMove){
+
+      const computerMove = pickComputerMove()
+
+      let result = '';
+      if (playerMove === 'scissors'){
+
+        if (computerMove === 'Rock'){
+        result = 'lose';
+        } else if (computerMove === 'Paper'){
+          result = 'Win '
+        } else if (computerMove === 'scissors'){
+          result = 'Tie'
+        }
+
+      } else if (playerMove === 'Paper'){
+
+        if (computerMove === 'Rock'){
+          result = 'Win';
+        } else if (computerMove === 'Paper'){
+          result = 'Tie'
+        } else if (computerMove === 'scissors'){
+          result = ' lose'
+        }
+        
+      } else if(playerMove ==='Rock'){
+            
+        if (computerMove === 'Rock'){
+          result = 'tie';
+        } else if (computerMove === 'Paper'){
+          result = ' Win'
+        } else if (computerMove === 'scissors'){
+          result = 'lose'
+        }
+        
+      }
+    
+      alert(`You picked ${playerMove}. Computer picked ${computerMove} You ${result}`)
+    }
+
+    function pickComputerMove(){
+
+      const randonNum = Math.random()
+      let computerMove = ''; //global variable
+      
+      if (randonNum > 0 && randonNum < 1/3){
+        computerMove = 'Rock'
+      } else if (randonNum >= 1/3 && randonNum < 2/3){
+        computerMove = 'Paper'
+      }
+      else if (randonNum >= 2/3 && randonNum < 1){
+        computerMove = 'scissors'
+      }
+
+      return computerMove;
+    }
+  // return than a value , also return calculation , return not cumpolsary
+  // returns back to place it stated
+  // Functions create scope
+  // Tracing the code
+  </script>
+</body>
+</html>

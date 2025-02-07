@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06Exercise</title>
+</head>
+<body>
+  <script>
+   /*
+   let hour = '14';
+    const name = "Parul"
+
+    if (hour > 6 && hour < 12 ){
+      console.log(`Good morning ${name}`)
+    } else if (hour >= 13 && hour < 17){
+      console.log(`Good night ${name}`)
+    }
+    */
+
+    // 6d---
+    let age = 4;
+    
+    /*
+    if(age < 6 && age > 65){
+      console.log(`Congrats you are eligable for discount`)
+    } else if (age > 6 && age < 65){
+      console.log(`No Discount`)
+    } */
+    /*---------------------------------
+    if(age <= 6 || age > 65){
+      console.log(`Congrats you are eligable for discount`)
+    } else{
+      console.log(`No Discount`)
+    }
+    */
+    // Wrong operator used first time 
+    //6e------------------
+    const isHoliday = true;
+    if(age <= 6 || age > 65){
+      console.log(`Congrats you are eligable for discount`)
+
+    } else{
+      console.log(`No Discount`)
+    }
+
+    //6f------------------
+    const randomNumber = Math.random()
+    //6g------------------
+    let result = ''
+        //6h------------------
+    let guess = 'Heads'
+    //6i------------------
+    if(randomNumber <= 0.5 ){
+      result = 'Heads'
+      console.log(`${result}`)
+    } else if(randomNumber > 0.6 && randomNumber < 1){
+      result = 'Tails'
+      console.log(`${result}`)
+    }
+
+    //6j------------------
+    const result2 = randomNumber < 0.5 ? 'heads' : 'tails';
+
+    const guess2 = 'tails';
+    console.log(guess2 === result2 ? 'You win!' : 'You lose!');
+   
+  </script>
+</body>
+</html>

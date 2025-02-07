@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-Challenge Exercise</title>
+</head>
+<body>
+  <button onclick="playGame('heads')">Heads</button>
+  <button onclick="playGame('tails')">Tails</button>
+  <script>
+    /*
+      const randomNumber = Math.random();
+      const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+      const guess = '';
+      function playGame(guess){
+      console.log(guess === result ? 'You win!' : 'You lose!');
+    }
+    */
+    const score = JSON.parse(localStorage.getItem('score')) || {
+      wins: 0,
+      losses: 0,
+      }
+
+      
+    function playGame(guess) {
+      const randomNumber = Math.random();
+      const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        console.log(guess === result ? 'You win!' : 'You lose!');
+      
+      /*
+      const score = {
+        wins: 0,
+        losses: 0,
+      }
+        */
+      
+      if (result === 'You win!'){
+        score.wins += 1;
+      } else if (result === 'You lose!'){
+        score.losses += 1;
+      }
+      console.log(score)
+
+      localStorage.setItem('score', JSON.stringify(score));
+    }
+    //something wrong in solving the question  line 
+  </script>
+</body>
+</html>

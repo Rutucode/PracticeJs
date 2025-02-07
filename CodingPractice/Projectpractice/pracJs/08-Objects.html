@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08 Objects</title>
+</head>
+<body>
+  <script>
+    //Object groups multiple values together
+/*
+    const product = {
+      name : 'Sockes', //Property value
+      price : 1090
+    };
+
+    console.log(product);
+    console.log(typeof product);
+    console.log(product.name);
+    console.log(product.price);
+
+    product.name = 'cotton sockes';
+    console.log(product);
+
+    product.newProperty = 'true';
+    console.log(product);
+    // Remove value
+    delete product.newProperty;
+    console.log(product)
+    */
+
+    // obj make code organised, use multiple values,
+    
+    const product2 = {
+      name : 'shirt',
+      ['delivery-time'] : '4pm',
+      'delivery-time' : '4pm', // another way 
+      rating: {
+        oneStar: 0,
+        fiveStar: 5,
+        count: 87 //nested objects
+      },
+      funct : function function1(){
+        console.log('function inside object');
+        // function inside an object is called a method
+      }
+      // Inside object we can save any type of values -numbers, strings, booleans, objects etc.
+    };
+
+    console.log(product2);
+    console.log(product2.name);
+    // another way
+    console.log(product2['name']); // lets use [],  which normally don't work with dot notation
+
+    //console.log(product2.delivery-time); // such cases js tries to minus 
+    console.log(product2['delivery-time']);
+    console.log(product2.rating.count);
+    product2.funct();
+    // console.log()  is a method can check by typeof 
+    // Math.random() is method; math is object, random is a function
+
+    // Built-in objects, Math.random(), console.log()  are built-in objs. They are provided by the language.
+    /*
+    Two more oBuilt-in bjects 
+    1) JSON, Javascript object notation
+      - Syntax, similar to js obj. But has less features.
+      - All properties and strings must use double quotes in JSON
+      - JSON does not support functions
+      Why to use JSON
+        - JSON is universal syntax
+        - use JSON to send data b/w 2 computers
+        - use to store data
+
+    2) localStorage
+    */
+   JSON.stringify(product2)
+
+   const jsonString = JSON.stringify(product2)
+   JSON.parse(jsonString) //to convert
+
+   console.log(JSON.stringify(product2)); //function is not supported in this
+   console.log(typeof JSON.stringify(product2));
+   console.log(JSON.parse(jsonString) )
+   //--------------------------------------------------------------------------------------------
+    // Objects can have properties nad methods 
+   console.log('hello'.length) //auto boxing
+   console.log('hello'.toUpperCase())
+   //objects are reference
+
+   const obj1 = {
+    message : 'hello'
+   }
+
+   const obj2 = obj1
+
+   obj1.message = 'Good job';
+   console.log(obj1)
+
+   const obj3 = {
+     message : 'Good job'
+   }
+
+   console.log(obj3 === obj1)//not same as reference are different
+
+   const object4 = {
+    message : 'Good job',
+    price : 799
+   }
+   //const message = object4.message;
+   const {message} = object4; // both are same 
+   console.log(message, price);
+  </script>
+</body>
+</html>

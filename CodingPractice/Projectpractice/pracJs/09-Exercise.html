@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09 Exercise</title>
+</head>
+<body>
+  <!-- 9a -->
+   <!-- <button>9a</button> -->
+
+   <!-- 9b -->
+   <!-- <button class="btn-change">9b</button> -->
+
+   <!-- 9c -->
+    <button onclick="buttonClick('heads')" class="heads">heads</button>
+    <button onclick="buttonClick('tails')" class="tails">tails</button>
+    <p class="displayResult"></p>
+
+    <!-- 9d -->
+     <input placeholder="Enter your name" class="yourName-input" onkeydown="displayInputName()">
+     <button>Submit</button>
+     <p class="displayName"></p>
+  <script>
+    //console.log(document.querySelector('button'))
+
+   // document.querySelector('.btn-change').innerHTML = '9b done !'
+
+    function buttonClick(choice){
+      /* wrong code
+    const headsBtn = document.querySelector('.heads')
+    const tailsBtn = document.querySelector('.tails')
+
+    if (headsBtn.innerHTML === 'heads'){
+      console.log(document.querySelector('.displayResult').innerHTML = 'You choose heads')
+    } else if (tailsBtn.innerHTML === 'tails'){
+      console.log(document.querySelector('.displayResult').innerHTML = 'You choose tails.')
+    }
+      */
+      document.querySelector('.displayResult').innerHTML = `You choose ${choice}`
+  }
+
+  function displayInputName() {
+    console.log('event.key')
+  }
+
+  </script>
+</body>
+</html>

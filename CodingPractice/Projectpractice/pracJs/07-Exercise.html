@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07 Exercise</title>
+</head>
+<body>
+  <script>
+    /*
+    function greet(name){
+      console.log(`Hello ${name}!`)
+    }
+    greet('Simon');
+    greet()
+    */
+    function greet(name){
+      if (!name){
+      console.log(`Hi there!`)
+    } else {
+      console.log(`Hello ${name}!`)
+    }
+  }
+    greet('simran');
+    // --------------------------------------
+    function convertToFahrenheit(celsius){
+      const formulaF = (celsius * 9/5) + 32
+      console.log(formulaF)
+    }
+
+    convertToFahrenheit(25)
+    // ---------------------------------------
+    function convertToCelsius(fahrenheit){
+      const  formulC = (fahrenheit - 32) *5/9
+      console.log(formulC)
+    }
+    convertToCelsius(86)
+    // ----------------------------------------
+    function convertTemperature(degree, unit){
+      const c = (degree - 32) *5/9;
+      const f = (degree * 9/5) + 32
+      if (unit === 'C'){
+       
+        console.log(`${c} C`)
+      } else if (unit === 'F' ){
+      
+      console.log(`${f} F`)
+      }
+    }
+    convertTemperature(86, 'C')
+    convertTemperature(25, 'F')
+    //7g ----------------------------------------
+    function convertLength(length, from, to){
+
+    }
+
+
+    // ----------------------
+ 
+      function convertLength(length, from, to) {
+        if (from === 'km' && to === 'miles') {
+          return `${length / 1.6} miles`;
+        } else if (from === 'miles' && to === 'km') {
+          return `${length * 1.6} km`;
+
+        // You can also do if (from === 'km' && to === 'km) { ... }
+        // if (from === to) is a trick you can use to save some code.
+        } else if (from === to) {
+          return `${length} ${to}`;
+        }
+      }
+
+      console.log(convertLength(50, 'miles', 'km'));
+      console.log(convertLength(32, 'km', 'miles'));
+      console.log(convertLength(50, 'km', 'km'));
+ 
+  </script>
+</body>
+</html>

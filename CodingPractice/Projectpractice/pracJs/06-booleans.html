@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booleans</title>
+</head>
+<body>
+
+  <!-- Truthy values falsey values
+   0,NaN , undefined, null is falsey
+   works with logiacal oprators  
+   
+   const x = undefined (have to write else it wont take directly)
+   
+   ternary operator ?:
+   guard operator  &&
+   Defaultoperator ||-->
+
+   <script>
+    /* const age = 17
+     if(age <= 16){
+       console.log(`You can drive`)
+     } else{
+       console.log(`You cannot drive`) // can have more than one condition
+     }*/
+
+    const result =  true ? 'truthy' : 'falsy'
+    console.log(result)
+
+    false && console.log('hello')
+    //bcoz first value is false program stops running that is called guard operator 
+
+      const curr = undefined || 'USD'
+      console.log(curr)
+      //default operator , saves time
+    // checks if first statements is true similar to && operator
+    // shortcuts for a if statments 
+   </script>
+</body>
+</html>
