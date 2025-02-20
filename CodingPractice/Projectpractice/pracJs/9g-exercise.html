@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9g</title>
+</head>
+<body>
+
+  <p>Amazon Shipping Calculator</p>
+  <input placeholder="Cost of order" class="js-cost-input" 
+  onkeydown=" handleCostKeyDown(event)
+  ">
+  <!--  onkeydown="console.log('event.key') Event is object-->
+  <button onclick="calculateTotal()">Calculate</button>
+
+  <p class="js-total-cost"></p>
+
+  <script>
+
+    String(25)
+    console.log('25' - 5)
+    console.log('25' + 5)
+
+        /*
+    function handleCostKeydown(event) {
+        if (event.key === 'Enter') {
+          calculateTotal();
+        }
+      }
+
+      /*
+       * Issue = the calculation is inaccurate.
+       * Fix = calculate the number in cents and then
+       *       convert back to dollars at the end.
+       
+       *    // Convert the numbers to cents by * 100.
+        let cost = Number(inputElement.value) * 100;
+       */
+
+    function handleCostKeyDown(event){
+       // console.log('event.key')
+  if(event.key === 'Enter'){
+    calculateTotal()
+   
+    }
+  }
+    function calculateTotal(){
+      const inputElement = document.querySelector('.js-cost-input');
+      console.log(document.querySelector('.js-cost-input'))
+
+      let cost = Number(inputElement.value);
+      Math.round(cost)
+      console.log(inputElement.value) * 100;
+      if(cost < 4000){
+        cost += 1000;
+      }
+      //convert to dollars
+      document.querySelector('.js-total-cost').innerHTML = `$ ${cost/100}`;
+    }
+
+
+   // const buttonElement = document.querySelector('.js-sub-button').innerHTML = 'Subscribed'
+    function subscribe(){
+      const buttonElement = document.querySelector('.js-sub-button');
+      if(buttonElement.innerText === 'Subscribe'){
+          buttonElement.innerHTML = 'Subscribed';
+      } else {
+          buttonElement.innerHTML = 'Subscribe';
+      }
+    }
+    
+  </script>
+</body>
+</html>

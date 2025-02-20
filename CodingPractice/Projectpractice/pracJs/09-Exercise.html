@@ -18,14 +18,15 @@
     <p class="displayResult"></p>
 
     <!-- 9d -->
-     <input placeholder="Enter your name" class="yourName-input" onkeydown="displayInputName()">
-     <button>Submit</button>
+     <input placeholder="Enter your name" class="yourName-input" onkeydown="keyDown(event)">
+     <button onclick="displayInputName()">Submit</button>
+
      <p class="displayName"></p>
   <script>
     //console.log(document.querySelector('button'))
-
+    //-----------------------------------------------------------
    // document.querySelector('.btn-change').innerHTML = '9b done !'
-
+     //-----------------------------------------------------------
     function buttonClick(choice){
       /* wrong code
     const headsBtn = document.querySelector('.heads')
@@ -39,10 +40,24 @@
       */
       document.querySelector('.displayResult').innerHTML = `You choose ${choice}`
   }
-
+  // ----------------9d & 9e & 9f
   function displayInputName() {
-    console.log('event.key')
+    const inputValue = document.querySelector('.yourName-input');
+    let name = inputValue.value;
+    console.log(inputValue.value)
+
+    document.querySelector('.displayName').innerHTML = `Your name is ${name}`
+
+    
   }
+  //find problem - answer enter e should be capital
+  function keyDown(event){
+    if (event.key === 'Enter'){
+       displayInputName()
+      }
+  }
+ //-----------------------------------------------------------
+
 
   </script>
 </body>

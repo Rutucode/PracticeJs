@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9h</title>
+</head>
+<body>
+
+  <p>Input box</p>
+  <input placeholder="Text" class="js-input" 
+   onkeyup="inputBox(event)">
+  <!--  onkeydown="console.log('event.key') Event is object-->
+  <button onclick="inputBox()">btn</button>
+
+  <p class="js-sentance"></p>
+
+  <script>
+
+    function inputBox(event){
+      const inputElement = document.querySelector('.js-input');
+      let input = inputElement.value;
+      console.log(document.querySelector('.js-input'))
+
+      //convert to dollars
+      document.querySelector('.js-sentance').innerHTML = `${input}`;
+    }
+    
+  </script>
+</body>
+</html>
