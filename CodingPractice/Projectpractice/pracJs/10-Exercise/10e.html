@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10e unsolved</title>
+  <style>
+    .action-Button, .action-Button-Two{
+      background-color: black;
+      color: white;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .is-Clicked{
+      background-color: lightgray;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 
+  <script>
+    function isClickedFunction(clickedButton) {
+      // Select all buttons with the class 'action-Button'
+      let allButtons = document.querySelectorAll('.action-Button');
+      
+      // Remove the 'is-Clicked' class from all buttons
+      allButtons.forEach(function(button) {
+        button.classList.remove('is-Clicked');
+      });
+
+      // Add the 'is-Clicked' class to the clicked button
+      clickedButton.classList.add('is-Clicked');
+    }
+  -->
+    <button onclick=" isClickedFunction(this)" ondblclick="unClikedButton()" class="action-Button">Gaming</button>
+  <button class="action-Button" onclick="isClickedFunction(this)">Music</button>
+  <button class="action-Button" onclick="isClickedFunction(this)">Tech</button>
+</body>
+<script>
+   
+    function isClickedFunction(clickedButton){
+    let toggleBtn = document.querySelectorAll('.action-Button');
+
+    // toggleBtn.forEach(function(button){
+    //   button.classList.remove('is-Cliked')
+    // })
+    clickedButton.classList.add('is-Clicked');
+  }
+  function unClikedButton(unClick){
+    let toggleBtn = document.querySelectorAll('.action-Button');
+    unClick.classList.add('is-Clicked');
+  }
+  /*
+  AUTHOR SOLUTION
+  <button class="toggle-button js-button" onclick="
+      const button = document.querySelector('.js-button');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    ">Gaming</button>
+
+    <button class="toggle-button js-button-2" onclick="
+      const button = document.querySelector('.js-button-2');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    ">Music</button>
+
+    <button class="toggle-button js-button-3" onclick="
+      const button = document.querySelector('.js-button-3');
+      if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    ">Tech</button>
+  */
+  
+
+  
+</script>
+</html>

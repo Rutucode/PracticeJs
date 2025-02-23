@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10e unsolved</title>
+  <style>
+    .action-Button, .action-Button-Two{
+      background-color: black;
+      color: white;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .is-Clicked{
+      background-color: lightgray;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+  <button class="action-Button" onclick="isClickedFunction(this)">Gaming</button>
+  <button class="action-Button-Two" onclick="isClickedFunction(this)">Music</button>
+  <button class="action-Button" onclick="isClickedFunction(this)">Tech</button>
+
+  <script>
+    function isClickedFunction(clickedButton){
+      // Reset all buttons to default state
+      const allButtons = document.querySelectorAll('.action-Button, .action-Button-Two');
+      allButtons.forEach(button => {
+        button.classList.remove('is-Clicked');
+      });
+
+      // Add 'is-Clicked' class to the clicked button
+      clickedButton.classList.add('is-Clicked');
+    }
+  -->
+
+  <!-- 
+    <button class="action-Button" onclick="isClickedFunction(this)">Gaming</button>
+  <button class="action-Button" onclick="isClickedFunction(this)">Music</button>
+  <button class="action-Button" onclick="isClickedFunction(this)">Tech</button>
+
+  <script>
+    function isClickedFunction(clickedButton) {
+      // Remove 'is-Clicked' class from all buttons
+      const allButtons = document.querySelectorAll('.action-Button');
+      allButtons.forEach(button => {
+        button.classList.remove('is-Clicked');
+      });
+
+      // Add 'is-Clicked' class to the clicked button
+      clickedButton.classList.add('is-Clicked');
+    }
+  </script>
+
+  -->
+  <button onclick=" isClickedFunction(this)" class="action-Button">Gaming</button>
+  <button class="action-Button" onclick="isClickedFunction(this)">Music</button>
+  <button class="action-Button" onclick="isClickedFunction(this)">Tech</button>
+</body>
+<script>
+    function isClickedFunction(clickedButton) {
+      // Remove 'is-Clicked' class from all buttons
+      let allButtons = document.querySelectorAll('.action-Button');
+      for (let i = 0; i < allButtons.length; i++) {
+        allButtons[i].classList.remove('is-Clicked');
+      }
+
+      // Add 'is-Clicked' class to the clicked button
+      clickedButton.classList.add('is-Clicked');
+    }
+
+  //   function isClickedFunction(clickedButton){
+  //   let toggleBtn = document.querySelectorAll('.action-Button');
+
+  //   if (toggleBtn.innerText === 'Gaming'){
+  //     toggleBtn.innerHTML = 'Gaming';
+  //     toggleBtn.classList.add('is-Clicked')
+  //   } 
+  //   else if(toggleBtn.innerText === 'Music'){
+  //     toggleBtn.innerHTML = 'Music';
+  //     toggleBtn.classList.add('is-Clicked')
+  //   } else if (toggleBtn.innerText === 'Tech'){
+  //     toggleBtn.innerHTML = 'Gaming';
+  //     toggleBtn.classList.add('is-Clicked')
+  //   }
+  // }
+ 
+/* AUTHOR SOLUTION
+  <button class="toggle-button js-button" onclick="
+      toggleButton('.js-button');
+    ">Gaming</button>
+
+    <button class="toggle-button js-button-2" onclick="
+      toggleButton('.js-button-2');
+    ">Music</button>
+
+    <button class="toggle-button js-button-3" onclick="
+      toggleButton('.js-button-3');
+    ">Tech</button>
+
+------------HTML ABOVE---------------------
+
+// The word "toggle" means turn on/off.
+function toggleButton(selector) {
+  const button = document.querySelector(selector);
+  if (!button.classList.contains('is-toggled')) {
+
+    // Before turning this button ON, check if there's
+    // already a button that's turned ON and turn it OFF.
+    turnOffPreviousButton();
+
+    button.classList.add('is-toggled');
+  } else {
+    button.classList.remove('is-toggled');
+  }
+}
+
+function turnOffPreviousButton() {
+  const previousButton = document.querySelector('.is-toggled');
+  if (previousButton) {
+    previousButton.classList.remove('is-toggled');
+  }
+}
+*/
+</script>
+</html>

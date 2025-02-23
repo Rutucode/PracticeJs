@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Exercise</title>
+  <style>
+    *{
+      border: none;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .amazon-btn-style{
+      background-color: rgb(255, 216, 20);
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+    
+    }
+    .uber-btn-style{
+      border-radius: 8px;
+      font-weight: bold;
+      padding: 16px;
+    }
+
+    .btn-one{
+      background-color: black;
+      color: white;
+    }
+    .btn-two{
+      background-color: rgb(230, 230, 230);
+    }
+    .test{
+      padding: 8px 16px;
+    }
+    .gaming-btn{
+      border-radius: 8px;
+      font-weight: bold;
+      padding: 16px 32px;
+      background-color: black;
+      color: white;
+    } 
+    .is-toggled{
+      border-radius: 8px;
+      font-weight: bold;
+      padding: 16px 32px;
+      background-color:  rgb(230, 230, 230);
+      color: black;
+    }
+    /*background-image: url();*/
+  </style>
+</head>
+<body>
+ <hgroup>
+  <h1>Exercise 10</h1>
+ </hgroup>
+  <div>
+    <p>10A</p>
+  <button class="amazon-btn-style">Add to cart</button>
+  </div>
+
+  <div>
+    <p>10B</p>
+    <button class="uber-btn-style btn-one">Request now</button>
+    <button class="uber-btn-style btn-two">Schedule for later</button>
+  </div>
+ 
+  <div>
+    <p>10C</p>
+    <button class="js-button test ">Test</button>
+  </div>
+  <script>
+    const btnClass = document.querySelector('.js-button');
+
+    btnClass.innerText = btnClass.classList.contains('js-button')
+    //btnClass.innerHTML = classList.contains('js-button')
+
+    console.log(btnClass)
+  </script>
+  <!-- 
+  Chat gpt  
+  <div>
+  <button class="js-button">Test</button>
+  </div>
+  <script>
+    const btnClass = document.querySelector('.js-button'); // Fixed selector
+
+    // Check if the button has the class 'js-button' and update the innerHTML accordingly
+    if (btnClass.classList.contains('js-button')) {
+      btnClass.innerHTML = 'Button has the class js-button'; // Change content
+    }
+
+    console.log(btnClass); // Log the button element
+  </script> -->
+
+  <div>
+    <p>10D</p>
+    <button class="gaming-btn" onclick="toggleFunction()">Gaming</button>
+  </div>
+  <script>
+    
+    function toggleFunction(){
+      const gamingButton = document.querySelector('.gaming-btn')
+
+      if (gamingButton.innerText === 'Gaming'){
+        gamingButton.innerHTML === 'Gaming'
+        gamingButton.classList.add('is-toggled')
+      }
+
+    }
+
+  </script>
+</body>
+</html>
